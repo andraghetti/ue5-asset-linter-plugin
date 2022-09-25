@@ -13,11 +13,8 @@
 UCLASS(config = Linter, defaultconfig)
 class ULinterSettings : public UObject
 {
-	GENERATED_UCLASS_BODY()
-	
+    GENERATED_UCLASS_BODY()
 public:
-
-	UPROPERTY(EditAnywhere, config, Category = Settings)
-	TAssetPtr<ULintRuleSet> DefaultLintRuleSet;
-
+    UPROPERTY(EditAnywhere, config, Category = Settings)
+    TSoftObjectPtr<ULintRuleSet> DefaultLintRuleSet;
 };

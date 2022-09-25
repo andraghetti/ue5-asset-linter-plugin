@@ -2,7 +2,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "LintRule.generated.h"
+
+
+class ULintRule;
+
 
 UENUM(BlueprintType)
 enum class ELintRuleSeverity : uint8
