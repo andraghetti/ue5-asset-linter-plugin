@@ -1,8 +1,12 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
+
 #include "LintRules/LintRule_StaticMesh_ValidUVs.h"
+
 #include "LintRuleSet.h"
 #include "LinterNamingConvention.h"
-#include "HAL/FileManager.h"
+
+#include "Engine/StaticMesh.h"
+
 
 ULintRule_StaticMesh_ValidUVs::ULintRule_StaticMesh_ValidUVs(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)

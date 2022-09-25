@@ -1,9 +1,12 @@
 #include "LinterNamingConvention.h"
+
+#include "AnyObject_LinterDummyClass.h"
+
 #include "DetailLayoutBuilder.h"
-#include "PropertyCustomizationHelpers.h"
-#include "Templates/SharedPointer.h"
 #include "DetailCategoryBuilder.h"
 #include "IDetailChildrenBuilder.h"
+#include "PropertyCustomizationHelpers.h"
+
 
 TSharedRef<IDetailCustomization> FLinterNamingConventionDetails::MakeInstance()
 {

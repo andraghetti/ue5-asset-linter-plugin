@@ -1,7 +1,11 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
 #pragma once
+
+#include "LintRule.h"
+
 #include "Widgets/SCompoundWidget.h"
 #include "Widgets/DeclarativeSyntaxSupport.h"
+
 
 class SLintReportAssetErrorList : public SCompoundWidget
 {

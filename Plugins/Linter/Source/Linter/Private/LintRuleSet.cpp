@@ -1,4 +1,7 @@
 #include "LintRuleSet.h"
+
+#include "AnyObject_LinterDummyClass.h"
+#include "Linter.h"
 #include "LintRunner.h"
 
 #include "AssetRegistryModule.h"

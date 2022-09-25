@@ -2,7 +2,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "AnyObject_LinterDummyClass.generated.h"
+
 
 UCLASS(BlueprintType, Blueprintable)
 class UAnyObject_LinterDummyClass : public UObject
@@ -11,6 +13,5 @@ class UAnyObject_LinterDummyClass : public UObject
 
 public:
 
-	UAnyObject_LinterDummyClass(const FObjectInitializer& ObjectInitializer);
+	explicit UAnyObject_LinterDummyClass(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 };
-

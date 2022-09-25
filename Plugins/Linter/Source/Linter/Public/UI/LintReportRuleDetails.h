@@ -1,12 +1,18 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
 #pragma once
-#include "Widgets/SCompoundWidget.h"
+
+#include "UI/LintReportRuleDetails.h"
+
 #include "LintRule.h"
+
+#include "AssetThumbnail.h"
+#include "Widgets/Layout/SBox.h"
+#include "Widgets/SCompoundWidget.h"
+
 
 class SLintReportRuleDetails : public SCompoundWidget
 {
 public:
-
 	SLATE_BEGIN_ARGS(SLintReportRuleDetails)
 	{
 	}
@@ -20,7 +26,6 @@ public:
 
 
 public:
-	
 	void Construct(const FArguments& Args);
 
 private:

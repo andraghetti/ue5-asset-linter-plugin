@@ -1,11 +1,15 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
 
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
-#include "Templates/SharedPointer.h"
+
+#include "Engine/DataAsset.h"
 #include "IDetailCustomization.h"
+#include "Templates/SharedPointer.h"
 #include "PropertyHandle.h"
+#include "UObject/Object.h"
+
 #include "LinterNamingConvention.generated.h"
 
 
@@ -62,8 +66,7 @@ class LINTER_API ULinterNamingConvention : public UDataAsset
 	GENERATED_BODY()
 
 public:
-
-	ULinterNamingConvention(const FObjectInitializer& ObjectInitializer);
+	explicit ULinterNamingConvention(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	UPROPERTY(EditAnywhere, Category="Conventions", meta = (AllowAbstract = ""))
 	TArray<FLinterNamingConventionInfo> ClassNamingConventions;
@@ -73,9 +76,4 @@ public:
 
 	UFUNCTION(Blueprintcallable, Category = "Conventions")
 	void SortConventions();
-
-protected:
-
-	
-
 };

@@ -3,20 +3,20 @@
 #include "LinterContentBrowserExtensions.h"
 
 #include "Linter.h"
-
-#include "Modules/ModuleManager.h"
-#include "LevelEditor.h"
-#include "Framework/MultiBox/MultiBoxBuilder.h"
 #include "LinterStyle.h"
-#include "LauncherPlatformModule.h"
-#include "UnrealEdMisc.h"
+
+#include "BatchRenameTool/BatchRenameTool.h"
 #include "ContentBrowserModule.h"
-#include "EditorStyleSet.h"
-#include "Framework/MultiBox/MultiBoxExtender.h"
-#include "Framework/Commands/UIAction.h"
 #include "Delegates/IDelegateInstance.h"
-#include "TooltipEditor/TooltipTool.h"
+#include "Framework/Commands/UIAction.h"
+#include "Framework/MultiBox/MultiBoxBuilder.h"
+#include "Framework/MultiBox/MultiBoxExtender.h"
+#include "LevelEditor.h"
 #include "Misc/EngineVersionComparison.h"
+#include "Modules/ModuleManager.h"
+#include "TooltipEditor/TooltipTool.h"
+#include "UnrealEdMisc.h"
+
 
 #define LOCTEXT_NAMESPACE "Linter"
 DEFINE_LOG_CATEGORY_STATIC(LinterContentBrowserExtensions, Log, All);

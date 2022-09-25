@@ -6,18 +6,19 @@ public class Linter : ModuleRules
 {
     public Linter(ReadOnlyTargetRules Target) : base(Target)
     {
-        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;		
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 		
 		PublicDependencyModuleNames.AddRange(
-			new string[]
+			new[]
 			{
 				"Core",
+				"Engine",
 			}
 		);
 			
 		
 		PrivateDependencyModuleNames.AddRange(
-			new string[]
+			new[]
             {
                 "CoreUObject",
                 "Engine",

@@ -1,11 +1,13 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
-
 #pragma once
+
+#include "CoreMinimal.h"
 
 #include "Modules/ModuleManager.h"
 
 #include "Widgets/Docking/SDockTab.h"
 #include "Styling/SlateStyle.h"
+
 
 class FLinterManagerBase;
 

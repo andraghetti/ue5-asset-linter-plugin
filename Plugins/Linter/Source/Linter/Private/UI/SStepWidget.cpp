@@ -1,13 +1,15 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+
 #include "UI/SStepWidget.h"
+
 #include "Widgets/SBoxPanel.h"
 #include "Widgets/Layout/SBorder.h"
-#include "Widgets/Layout/SBox.h"
 #include "Widgets/Images/SImage.h"
-#include "Widgets/Input/SButton.h"
-#include "Widgets/Text/STextBlock.h"
 #include "Widgets/Images/SThrobber.h"
+#include "Widgets/Input/SButton.h"
 #include "Widgets/Text/SRichTextBlock.h"
+#include "Widgets/Text/STextBlock.h"
+
 
 bool SStepWidget::IsStepCompleted(bool bAllowWarning /*= true*/)
 {

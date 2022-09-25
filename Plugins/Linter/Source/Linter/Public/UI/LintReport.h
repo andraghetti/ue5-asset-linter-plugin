@@ -1,11 +1,13 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
 #pragma once
 
+#include "CoreMinimal.h"
+
+#include "LintRule.h"
+
 #include "Widgets/SCompoundWidget.h"
 #include "Widgets/Layout/SScrollBox.h"
-
-#include "LintReportAssetError.h"
-#include "LintRule.h"
+#include "Widgets/Text/STextBlock.h"
 
 
 class SLintReport : public SCompoundWidget
@@ -37,6 +39,4 @@ public:
 	bool bHasRanReport = false;
 	int32 NumErrors = 0;
 	int32 NumWarnings = 0;
-
-	
 };

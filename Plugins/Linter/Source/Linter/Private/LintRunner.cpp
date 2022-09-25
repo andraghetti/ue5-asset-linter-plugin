@@ -1,5 +1,9 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+
 #include "LintRunner.h"
+
+#include "Linter.h"
+
 
 #define LOCTEXT_NAMESPACE "Linter"
 

@@ -2,22 +2,23 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LintRule.h"
+
+#include "LintRules/LintRule_Blueprint_Base.h"
 
 #include "LintRule_Path_IsNotTooLong.generated.h"
+
 
 UCLASS(BlueprintType, Blueprintable, Abstract)
 class LINTER_API ULintRule_Path_IsNotTooLong : public ULintRule
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	ULintRule_Path_IsNotTooLong(const FObjectInitializer& ObjectInitializer);
+    explicit ULintRule_Path_IsNotTooLong(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
-	UPROPERTY(EditDefaultsOnly, Category = "Settings")
-	int32 MaxPathLimit = 140;
+    UPROPERTY(EditDefaultsOnly, Category = "Settings")
+    int32 MaxPathLimit = 140;
 
 protected:
-	virtual bool PassesRule_Internal_Implementation(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
-
+    virtual bool PassesRule_Internal_Implementation(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
 };

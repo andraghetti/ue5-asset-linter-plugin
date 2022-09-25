@@ -1,6 +1,7 @@
 // Copyright 2016 Gamemakin LLC. All Rights Reserved.
 
 #include "BatchRenameTool/BatchRenameTool.h"
+
 #include "Framework/Application/SlateApplication.h"
 #include "Framework/Text/TextLayout.h"
 #include "Widgets/Layout/SBox.h"
@@ -16,7 +17,9 @@
 #include "Logging/MessageLog.h"
 #include "Logging/TokenizedMessage.h"
 
+
 #define LOCTEXT_NAMESPACE "LinterBatchRenamer"
+
 
 FDlgBatchRenameTool::FDlgBatchRenameTool(const TArray<FAssetData> Assets)
 	: bRemovePrefix(false)

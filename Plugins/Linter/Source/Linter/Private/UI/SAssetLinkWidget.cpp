@@ -1,15 +1,19 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+
 #include "UI/SAssetLinkWidget.h"
+
+#include "LinterStyle.h"
+
+#include "AssetRegistryModule.h"
+#include "ContentBrowserModule.h"
+#include "IContentBrowserSingleton.h"
+#include "SlateOptMacros.h"
+#include "Widgets/Input/SHyperlink.h"
 #include "Widgets/SBoxPanel.h"
-#include "Widgets/Layout/SBorder.h"
-#include "Widgets/Layout/SBox.h"
-#include "Widgets/Images/SImage.h"
-#include "Widgets/Input/SButton.h"
-#include "Widgets/Text/STextBlock.h"
-#include "Widgets/Images/SThrobber.h"
-#include "Widgets/Text/SRichTextBlock.h"
+
 
 BEGIN_SLATE_FUNCTION_BUILD_OPTIMIZATION
+
 void SAssetLinkWidget::Construct(const FArguments& Args)
 {
 	const float PaddingAmount = FLinterStyle::Get()->GetFloat("Linter.Padding");
@@ -34,4 +38,5 @@ void SAssetLinkWidget::Construct(const FArguments& Args)
 		]
 	];
 }
+
 END_SLATE_FUNCTION_BUILD_OPTIMIZATION

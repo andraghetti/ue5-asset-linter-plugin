@@ -2,34 +2,47 @@
 
 #include "UI/LintWizard.h"
 
-#include "CoreGlobals.h"
-#include "Delegates/Delegate.h"
-#include "AssetRegistryModule.h"
-#include "IAssetRegistry.h"
-#include "AssetData.h"
-#include "SlateOptMacros.h"
-#include "Widgets/Layout/SSeparator.h"
-#include "Widgets/Views/SListView.h"
-#include "Widgets/Text/SRichTextBlock.h"
-#include "Widgets/Notifications/SNotificationList.h"
-#include "Widgets/Layout/SScrollBox.h"
-#include "IUATHelperModule.h"
-#include "Misc/FeedbackContext.h"
-#include "Framework/Notifications/NotificationManager.h"
-#include "AssetThumbnail.h"
-#include "FileHelpers.h"
-#include "Logging/MessageLog.h"
-#include "Logging/TokenizedMessage.h"
-#include "Misc/EngineVersionComparison.h"
-
 #include "LinterStyle.h"
 #include "LintRuleSet.h"
 #include "LinterSettings.h"
 #include "UI/SAssetLinkWidget.h"
 
+#include "CoreGlobals.h"
+
+#include "AssetData.h"
+#include "AssetRegistryModule.h"
+#include "AssetThumbnail.h"
+#include "AssetToolsModule.h"
+#include "ContentBrowserModule.h"
+#include "Delegates/Delegate.h"
+#include "DesktopPlatformModule.h"
+#include "Engine/World.h"
+#include "FileHelpers.h"
+#include "IAssetRegistry.h"
+#include "IContentBrowserSingleton.h"
+#include "IDesktopPlatform.h"
+#include "IUATHelperModule.h"
+#include "Framework/Docking/TabManager.h"
+#include "Framework/Notifications/NotificationManager.h"
+#include "Logging/MessageLog.h"
+#include "Logging/TokenizedMessage.h"
+#include "Misc/EngineVersionComparison.h"
+#include "Misc/FeedbackContext.h"
+#include "SlateOptMacros.h"
+#include "Widgets/Docking/SDockTab.h"
+#include "Widgets/Input/SComboBox.h"
+#include "Widgets/Layout/SScrollBox.h"
+#include "Widgets/Layout/SSeparator.h"
+#include "Widgets/Notifications/SNotificationList.h"
+#include "Widgets/Text/SRichTextBlock.h"
+#include "Widgets/Views/SListView.h"
+
+
+#define LOCTEXT_NAMESPACE "Linter"
 
 
 BEGIN_SLATE_FUNCTION_BUILD_OPTIMIZATION
+
 void SLintWizard::Construct(const FArguments& InArgs)
 {
 	const float PaddingAmount = FLinterStyle::Get()->GetFloat("Linter.Padding");
@@ -662,3 +675,6 @@ bool SLintWizard::LoadAssetsIfNeeded(const TArray<FString>& ObjectPaths, TArray<
 
 	return true;
 }
+
+
+#undef LOCTEXT_NAMESPACE

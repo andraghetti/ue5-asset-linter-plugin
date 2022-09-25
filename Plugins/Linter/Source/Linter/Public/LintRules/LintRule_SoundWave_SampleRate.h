@@ -2,25 +2,26 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LintRule.h"
+
+#include "LintRules/LintRule_Blueprint_Base.h"
 
 #include "LintRule_SoundWave_SampleRate.generated.h"
+
 
 UCLASS(BlueprintType, Blueprintable, Abstract)
 class LINTER_API ULintRule_SoundWave_SampleRate : public ULintRule
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	ULintRule_SoundWave_SampleRate(const FObjectInitializer& ObjectInitializer);
+    explicit ULintRule_SoundWave_SampleRate(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
-	UPROPERTY(EditDefaultsOnly, Category = "Settings")
-	TArray<float> ValidSampleRates;
+    UPROPERTY(EditDefaultsOnly, Category = "Settings")
+    TArray<float> ValidSampleRates;
 
 
-	virtual bool PassesRule(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
+    virtual bool PassesRule(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
 
 protected:
-	virtual bool PassesRule_Internal_Implementation(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
-
+    virtual bool PassesRule_Internal_Implementation(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
 };

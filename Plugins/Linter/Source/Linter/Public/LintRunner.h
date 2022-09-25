@@ -2,10 +2,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "HAL/ThreadSafeCounter.h"
+
+#include "LintRuleSet.h"
+
 #include "HAL/Runnable.h"
-#include "AssetData.h"
-#include "Linter.h"
+
 
 class FLintRunner : public FRunnable
 {

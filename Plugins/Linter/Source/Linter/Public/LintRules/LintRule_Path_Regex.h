@@ -2,40 +2,41 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LintRule.h"
+
+#include "LintRules/LintRule_Blueprint_Base.h"
 
 #include "LintRule_Path_Regex.generated.h"
+
 
 UCLASS(BlueprintType, Blueprintable, Abstract)
 class LINTER_API ULintRule_Path_Regex : public ULintRule
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	ULintRule_Path_Regex(const FObjectInitializer& ObjectInitializer);
+    explicit ULintRule_Path_Regex(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
-	UPROPERTY(EditAnywhere, Category="Settings")
-	FString RegexPatternString;
+    UPROPERTY(EditAnywhere, Category="Settings")
+    FString RegexPatternString;
 
-	UPROPERTY(EditAnywhere, Category = "Settings")
-	bool bMustNotContainRegexPattern = true;
+    UPROPERTY(EditAnywhere, Category = "Settings")
+    bool bMustNotContainRegexPattern = true;
 
-	UPROPERTY(EditAnywhere, Category = "Settings")
-	bool bCheckPerPathElement = true;
+    UPROPERTY(EditAnywhere, Category = "Settings")
+    bool bCheckPerPathElement = true;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Settings|Whole Path")
-	FText DisallowedWholePathRecommendedAction;
+    UPROPERTY(EditDefaultsOnly, Category = "Settings|Whole Path")
+    FText DisallowedWholePathRecommendedAction;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Settings|Whole Path")
-	FText NonConformingWholePathRecommendedAction;
+    UPROPERTY(EditDefaultsOnly, Category = "Settings|Whole Path")
+    FText NonConformingWholePathRecommendedAction;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Settings|Path Element")
-	FText DisallowedPathElementRecommendedAction;
+    UPROPERTY(EditDefaultsOnly, Category = "Settings|Path Element")
+    FText DisallowedPathElementRecommendedAction;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Settings|Path Element")
-	FText NonConformingPathElementRecommendedAction;
+    UPROPERTY(EditDefaultsOnly, Category = "Settings|Path Element")
+    FText NonConformingPathElementRecommendedAction;
 
 protected:
-	virtual bool PassesRule_Internal_Implementation(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
-
+    virtual bool PassesRule_Internal_Implementation(UObject* ObjectToLint, const ULintRuleSet* ParentRuleSet, TArray<FLintRuleViolation>& OutRuleViolations) const override;
 };

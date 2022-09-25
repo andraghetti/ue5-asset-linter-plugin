@@ -1,21 +1,25 @@
 // Copyright 2020 Gamemakin LLC. All Rights Reserved.
 
 #include "LinterCommandlet.h"
-#include "Editor.h"
+
+#include "Linter.h"
+#include "LinterSettings.h"
+#include "LintRule.h"
+
 #include "AssetRegistryModule.h"
-#include "AssetData.h"
-#include "Engine/ObjectLibrary.h"
 #include "Dom/JsonObject.h"
 #include "Dom/JsonValue.h"
+#include "Editor.h"
+#include "Engine/ObjectLibrary.h"
 #include "Interfaces/IPluginManager.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
-#include "Serialization/JsonWriter.h"
 #include "Serialization/JsonSerializer.h"
-#include "Linter.h"
-#include "LintRule.h"
+#include "Serialization/JsonWriter.h"
+
 
 DEFINE_LOG_CATEGORY_STATIC(LinterCommandlet, All, All);
+
 
 ULinterCommandlet::ULinterCommandlet(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)

@@ -1,13 +1,16 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
+
 #include "UI/LintReportAssetError.h"
-#include "Widgets/Layout/SBorder.h"
-#include "Widgets/SBoxPanel.h"
-#include "Widgets/Layout/SExpandableArea.h"
-#include "Widgets/Input/SHyperlink.h"
+
 #include "LintRule.h"
+#include "LinterStyle.h"
+
+#include "Widgets/Images/SImage.h"
+#include "Widgets/Layout/SBorder.h"
+#include "Widgets/Layout/SBox.h"
 #include "Widgets/Views/SListView.h"
 #include "Widgets/Views/STableRow.h"
-#include "Widgets/Layout/SBox.h"
+#include "Widgets/SBoxPanel.h"
 
 #define LOCTEXT_NAMESPACE "LintReport"
 

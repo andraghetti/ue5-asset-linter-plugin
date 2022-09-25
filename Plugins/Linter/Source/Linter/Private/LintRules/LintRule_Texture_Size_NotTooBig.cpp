@@ -1,8 +1,11 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
+
 #include "LintRules/LintRule_Texture_Size_NotTooBig.h"
+
 #include "LintRuleSet.h"
 #include "LinterNamingConvention.h"
-#include "HAL/FileManager.h"
+
+#include "Engine/Texture2D.h"
 
 ULintRule_Texture_Size_NotTooBig::ULintRule_Texture_Size_NotTooBig(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)

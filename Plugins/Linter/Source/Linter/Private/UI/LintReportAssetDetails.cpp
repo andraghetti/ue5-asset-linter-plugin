@@ -1,23 +1,24 @@
 // Copyright 2019-2020 Gamemakin LLC. All Rights Reserved.
+
 #include "UI/LintReportAssetDetails.h"
+
+#include "LintRule.h"
 #include "LinterStyle.h"
+#include "UI/LintReportAssetErrorList.h"
+
 #include "Widgets/Layout/SBorder.h"
-#include "EditorStyleSet.h"
-#include "Widgets/SBoxPanel.h"
+#include "Widgets/Layout/SBox.h"
 #include "Widgets/Layout/SExpandableArea.h"
+#include "Widgets/SBoxPanel.h"
+#include "EditorStyleSet.h"
 #include "ContentBrowserModule.h"
 #include "IContentBrowserSingleton.h"
 #include "AssetRegistryModule.h"
 #include "Widgets/Input/SHyperlink.h"
-#include "Widgets/Layout/SSpacer.h"
 #include "IAssetTools.h"
 #include "AssetToolsModule.h"
-#include "Misc/MessageDialog.h"
 #include "Internationalization/Internationalization.h"
 #include "Widgets/Text/STextBlock.h"
-#include "Framework/Views/ITypedTableView.h"
-#include "UI/LintReportAssetError.h"
-#include "LintRule.h"
 #include "AssetThumbnail.h"
 
 
