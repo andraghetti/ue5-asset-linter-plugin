@@ -2,7 +2,20 @@
 
 Currently WIP release of Linter.
 
-@TODO:
+- Clone this in your project `Plugins` directory.
+- Add the following to your `.uproject` file:
 
-* 4.27 patchups per community
-* Compilation and release guide
+```json
+
+...
+"Plugins": [
+    ...
+    {
+        "Name": "Linter",
+        "Enabled": true,
+    },
+    ...
+]
+...
+
+```
