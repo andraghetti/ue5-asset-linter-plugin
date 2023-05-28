@@ -2,6 +2,7 @@
 
 #include "LintRuleSet.h"
 
+#include "MaterialDomain.h"
 #include "Runtime/Launch/Resources/Version.h"
 #include "Materials/MaterialInterface.h"
 #include "Materials/Material.h"
