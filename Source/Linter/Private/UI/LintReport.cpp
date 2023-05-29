@@ -34,7 +34,9 @@
 #include "Widgets/Views/SListView.h"
 #include "Widgets/SBoxPanel.h"
 
-
+#ifdef LOCTEXT_NAMESPACE
+#undef LOCTEXT_NAMESPACE
+#endif
 #define LOCTEXT_NAMESPACE "Linter"
 
 

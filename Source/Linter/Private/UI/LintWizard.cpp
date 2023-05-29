@@ -37,7 +37,9 @@
 #include "Widgets/Text/SRichTextBlock.h"
 #include "Widgets/Views/SListView.h"
 
-
+#ifdef LOCTEXT_NAMESPACE
+#undef LOCTEXT_NAMESPACE
+#endif
 #define LOCTEXT_NAMESPACE "Linter"
 
 
